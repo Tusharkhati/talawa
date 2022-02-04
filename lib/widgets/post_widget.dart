@@ -56,7 +56,7 @@ class NewsPost extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     GestureDetector(
-                      onTap: () => function != null ? function!(post) : {},
+                      onTap: () => function != null ? function(post) : {},
                       child: Text(
                         "${model.likedBy.length} ${AppLocalizations.of(context)!.strictTranslate("Likes")}",
                         style: const TextStyle(
@@ -66,7 +66,7 @@ class NewsPost extends StatelessWidget {
                       ),
                     ),
                     GestureDetector(
-                      onTap: () => function != null ? function!(post) : {},
+                      onTap: () => function != null ? function(post) : {},
                       child: Text(
                         "${post.comments!.length} ${AppLocalizations.of(context)!.strictTranslate("comments")}",
                       ),
@@ -95,7 +95,7 @@ class NewsPost extends StatelessWidget {
                       ),
                     ),
                     GestureDetector(
-                      onTap: () => function != null ? function!(post) : {},
+                      onTap: () => function != null ? function(post) : {},
                       child: const Padding(
                         padding: EdgeInsets.only(left: 18.0),
                         child: Icon(
@@ -159,7 +159,7 @@ class PostContainerState extends State<PostContainer> {
             onPageChanged: (index) {
               setState(() {
                 pindex = index;
-                inView = pindex == 0;
+                inView = pindex = 0;
               });
             },
             children: List.generate(
